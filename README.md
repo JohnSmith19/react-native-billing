@@ -115,11 +115,20 @@ async pay() {
 
 ### In-app products 테스트
 
-실제 제품 구매를 테스트하기 위해 Google Play Store 에 판매자로 등록하고 In-app 상품을 등록합니다.
-
 [Trivial Drive - Sample for In-App Billing version 3](https://github.com/googlesamples/android-play-billing/tree/master/TrivialDrive)
 
-위 프로젝트를 Google Play Store 에 등록하고 현재 프로젝트의 패키지 이름을 위의 프로젝트와 동일하게 변경하기 위해 아래의 파일들을 변경합니다.
+실제 제품 구매 테스트를 위해 Google Play Store 에 판매자 계정을 등록하고
+Trivial Drive 의 패키지명을 변경(com.bytes.android.trivialdrivesample)하여 테스트용으로 등록합니다.
+
+위 프로젝트에 In-app 상품을 등록합니다.
+
+- premium
+- gas
+- ...
+
+현재 프로젝트(rnb)의 패키지 이름을 위의 프로젝트와 동일하게 변경합니다.
+
+아래의 파일들을 변경합니다.
 
 - AndroidMenifest.xml
 
@@ -154,3 +163,8 @@ applicationId "com.bytes.android.trivialdrivesample"
 ```java
 package com.bytes.android.trivialdrivesample;
 ```
+
+프로젝트를 실행하고 상품명을 변경하여 테스트 합니다.
+
+- premium
+- gas
