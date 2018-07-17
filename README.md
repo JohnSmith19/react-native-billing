@@ -112,3 +112,45 @@ async pay() {
   }
 }
 ```
+
+### In-app products 테스트
+
+실제 제품 구매를 테스트하기 위해 Google Play Store 에 판매자로 등록하고 In-app 상품을 등록합니다.
+
+[Trivial Drive - Sample for In-App Billing version 3](https://github.com/googlesamples/android-play-billing/tree/master/TrivialDrive)
+
+위 프로젝트를 Google Play Store 에 등록하고 현재 프로젝트의 패키지 이름을 위의 프로젝트와 동일하게 변경하기 위해 아래의 파일들을 변경합니다.
+
+- AndroidMenifest.xml
+
+```xml
+package="com.bytes.android.trivialdrivesample"
+```
+
+- BUCK
+
+```
+android_build_config(
+    name = "build_config",
+    package = "com.bytes.android.trivialdrivesample",
+)
+
+android_resource(
+    name = "res",
+    package = "com.bytes.android.trivialdrivesample",
+    res = "src/main/res",
+)
+```
+
+- build.gradle
+
+```
+applicationId "com.bytes.android.trivialdrivesample"
+```
+
+- MainActivity.java
+- MainApplication.java
+
+```java
+package com.bytes.android.trivialdrivesample;
+```
